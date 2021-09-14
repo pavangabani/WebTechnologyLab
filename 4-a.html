@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+<title>Diamond Pattern</title>
+</head>
+<body>
+	<script>
+for(i = 1; i<=9; i++)
+ {
+    for(j = 1; j<=(9-i); j++)
+   document.write("&nbsp;&nbsp;&nbsp;");
+    if(i == 1)
+      document.write("*");
+    else 
+    {
+      document.write("*");
+ 
+      for(j = 1; j<=2*i-3; j++)
+          document.write("&nbsp;&nbsp;&nbsp;");
+      document.write("*");
+    }
+    document.write("<br>");
+}
+for(i =8; i>0; i--)
+ {
+   for(j = 1; j<=9-i; j++)
+      document.write("&nbsp;&nbsp;&nbsp;");
+   if(i == 1)
+      document.write("*");
+   else
+   {
+    document.write("*");
+      for(j = 1; j<=2*i-3; j++)
+          document.write("&nbsp;&nbsp;&nbsp;");
+    document.write("*");
+   }
+   document.write("<br>");
+}
+	</script>
+</body>
+</html>

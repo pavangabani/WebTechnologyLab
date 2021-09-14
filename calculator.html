@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Calculator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body bgcolor="skyblue">
+	<div ng-app="calc" ng-controller="Calculator">
+
+<center>
+	<form><input type="number" ng-model="no1">
+<input type="number" ng-model="no2">
+	</form><b>{{"Sum : "+no1+"+ "+ no2+" = "+(no1+no2)}}</br>
+	<b>{{"Sub : "+no1+"- "+ no2+" = "+(no1-no2)}}<br>
+		<b>{{"Mul : "+no1+"* "+ no2+" = "+(no1*no2)}}<br>
+			<b>{{"Div : "+no1+"/ "+ no2+" = "+(no1/no2)}}<br></b>
+</center></div>
+<script>
+	angular.module("calc",[]).controller("Calculator",function($scope){
+		$scope.no1;
+		$scope.no2;
+	});
+</script>
+</body>
+</html>

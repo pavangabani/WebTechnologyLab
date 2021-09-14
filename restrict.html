@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+Select which you want restrict:
+<select ng-model="S">
+  <option value="E">element
+  <option value="A">atribute
+  <option value="C">class
+</select>
+<div ng-switch="S">
+  <div ng-switch-when="E">
+       <element></element>
+  </div>
+  <div ng-switch-when="A">
+       <div atribute></div>
+  </div>
+  <div ng-switch-when="C">
+      <div class="class" ></div>
+  </div>
+  
+</div>
+<script>
+var app = angular.module("myApp", []);
+app.directive("class", function() {
+    return {
+        restrict : "C",
+        template : "<h1>directive invoked by Class</h1>"
+    };
+});
+app.directive("element", function() {
+    return {
+        restrict : "E",
+        template : "<h1>directive invoked by Element </h1>"
+    };
+});
+app.directive("atribute", function() {
+    return {
+        restrict : "A",
+        template : "<h1>directive invoked by Atribute </h1>"
+    };
+});
+</script>
+</body>
+</html>

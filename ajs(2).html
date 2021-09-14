@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+   <h1> Select checkbox which you want restrict </h1>
+   Element :<input type="checkbox" ng-model="E"><br>
+   Atribute :<input type="checkbox" ng-model="A"><br>
+   Class : <input type="checkbox" ng-model="C"><br>
+<element ng-show="E"></element>
+
+<div atribute ng-show="A"></div>
+
+<div class="class" ng-show="C"></div>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("class", function() {
+    return {
+        restrict : "C",
+        template : "<h1>directive invoked by Class</h1>"
+    };
+});
+app.directive("element", function() {
+    return {
+        restrict : "E",
+        template : "<h1>directive invoked by Element </h1>"
+    };
+});
+app.directive("atribute", function() {
+    return {
+        restrict : "A",
+        template : "<h1>directive invoked by Atribute </h1>"
+    };
+});
+</script>
+
+
+
+</body>
+</html>

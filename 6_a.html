@@ -1,0 +1,21 @@
+<html>
+<script>
+function f()
+{
+var x="Browser CodeName: " + navigator.appCodeName +"<br>" ;
+var y="browser name : " + navigator.appName +"<br>";
+var z="browser version : " +navigator.appVersion +"<br>";
+var i="browser language : " +navigator.appLanguage +"<br>";
+var j="is browser online ? (yes or not) : " +navigator.onLine +"<br>";
+var k = "Cookies Enabled: " + navigator.cookieEnabled+"<br>";
+var a="geolocation : " +navigator.geolocation+"<br>";
+var b="platform: " +navigator.plateform+"<br>";
+var c= "Browser's Engine Name: " + navigator.product+"<br>";
+document.getElementById("p").innerHTML=x+y+z+i+j+k+a+b+c;
+}
+</script>
+<body>
+<input type="button" value="click here to get browser detail" onclick="f()">
+<p id="p"></p>
+</body>
+</html>

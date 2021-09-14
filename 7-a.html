@@ -1,0 +1,23 @@
+
+<html><head><title>Calculator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="ctrl">
+No.1 : <input type="number" ng-model="aa"><br>
+No.2 : <input type="number" ng-model="bb"><br>
+<bvm-engg-directive></bvm-engg-directive>
+</div>
+<script>
+var app = angular.module("myApp", []);
+app.controller("ctrl",function($scope){
+$scope.aa;
+$scope.bb;
+});
+app.directive("bvmEnggDirective",function(){
+return{
+template:"<h1>Sum : {{aa+bb}}<br>Sub : {{aa-bb}}<br>Mul : {{aa*bb}}<br>Div : {{aa/bb}}</h1>"}
+});
+</script>
+</body>
+</html>

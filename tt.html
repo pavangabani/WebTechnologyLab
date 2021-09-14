@@ -1,0 +1,36 @@
+<html>
+<style>
+table,tr,th,td{border:1px solid black;border-collapse:collapse;}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+var x=angular.module('myApp',[]);
+x.controller('pavan',function($scope){
+ $scope.names = [
+    {name:'Jani',country:'Norway'},
+    {name:'Carl',country:'Sweden'},
+    {name:'Margareth',country:'England'},
+    {name:'Hege',country:'Norway'},
+    {name:'Joe',country:'Denmark'},
+    {name:'Gustav',country:'Sweden'},
+    {name:'Birgit',country:'Denmark'},
+    {name:'Mary',country:'England'},
+    {name:'Kai',country:'Norway'}
+  ];
+$scope.order=function(x){y=x;};
+
+});
+</script>
+<body ng-app="myApp" ng-controller="pavan">
+<table>
+<tr>
+<th ng-click="order('name')">name</th>
+<th ng-click="order('country')">country</th>
+</tr>
+<tr ng-repeat="x in name | orderBy:y" >
+<td>{{x.name}}</td>
+<td>{{x.country}}</td>
+<tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int d;
+    cin>>d;
+    for(int i=0;i<d;i++){
+
+    int m,ft,fp;
+    cin>>ft>>fp;
+    int *a,*b,*c;
+
+    c=new int[50];
+    a=new int[ft];
+    b=new int[ft];
+
+    for(int i=0;i<ft;i++)
+    cin>>a[i];
+    for(int i=0;i<ft;i++)
+    cin>>b[i];
+    for(int i=0;i<50;i++)
+     c[i]=0;
+
+    for(int i=0;i<ft;i++){
+     m=a[i];
+     c[m]=c[m]+b[i];
+    }
+  int mn=10000;
+
+    for(int i=0;i<50;i++)
+        if(mn>c[i]&&c[i]!=0) mn=c[i];
+
+    cout<<mn<<endl;
+    }
+	return 0;
+}

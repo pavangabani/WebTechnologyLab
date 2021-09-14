@@ -1,0 +1,25 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="c"> 
+
+<ul>
+  <li ng-repeat="x in as">
+    {{ x.a + ' is ' + x.b }}
+  </li>
+</ul>
+
+</div>
+
+<script >
+angular.module('myApp', []).controller('c', function($scope) {
+  $scope.as = [
+    {a:'BVM',b:'college'},
+    {a:'Engg',b:'field'},
+    {a:'college',b:'building'}
+  ];
+});</script>
+
+</body>
+</html>
